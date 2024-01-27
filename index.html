@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en"> 
+  
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+      <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+      <link rel="shortcut icon" type="image/ico" href="favicon.ico">
+      <title>Nuh'un Gemisi</title>
+  </head>
+  <body>
+    
+      <header>
+          <section class="contenedor-header">
+              <div class="contenedor-icono-header">
+                  <h1><i class="fa fa-paw" id="icono-header" aria-label="Pink paw" alt="Pink paw"></i> Nuh'un Gemisi </h1>
+              </div>
+            
+              
+                  <button id="abrir-carrito"><i class="fas fa-shopping-cart" aria-label="shopping cart" alt="shopping cart"></i>  Sepetin (2 ürün)</button>
+                  <div class="overlay no-mostrar" id="overlay"></div>
+                  
+                    <div class="carrito">
+                      <div class="carrito-cruz">
+                        <h2 class="titulo-carrito">Alışveriş Sepeti</h2>
+                        <button id="cerrar-carrito" class="fas fa-times" aria-label="cross" alt="cross"></button>
+                      </div>
+                      <p>2 ürün</p>
+                      <div class="productos-carrito-1-y-2">
+                        <section class="producto-carrito linea-divisoria">
+                          
+                          <div class="contenedor-imagen-producto-carrito">
+                            <img src="img/Products/1575022860_2_2292.jpg" alt="Comfortable Cat Bed" class="imagen-producto-carrito"/>
+                          </div>
+                          <div class="info-productos-carrito">
+                            <div class="info-producto-carrito carrito-cruz">
+                              <h3 class="titulo-carrito">Yumuşak Rahat</h3><button class="far fa-trash-alt tacho-carrito" aria-label="trash bin" alt="trash bin"></button> 
+                            </div>
+                            <div class="info-producto-carrito-2 carrito-cruz">
+                              <input type="number" min="0" value="1" class="cantidad-producto-carrito" tabindex="0"><p>Adet</p><p>130₺</p>
+                            </div>
+                          </div>  
+                        </section>
+
+                        <section class="producto-carrito producto-carrito-2">
+                          
+                          <div class="contenedor-imagen-producto-carrito">
+                            <img src="img/Products/large-365520_LW_CUBOX_BASE_CAT_SCRATCH_OAK.jpg" alt="Cat Oak Scratcher" class="imagen-producto-carrito"/>
+                          </div>
+                          <div class="info-productos-carrito">
+                            <div class="info-producto-carrito carrito-cruz">
+                              <h3 class="titulo-carrito">Tırmık Ev</h3><button class="far fa-trash-alt tacho-carrito" aria-label="trash bin" alt="trash bin"></button> 
+                            </div>
+                            <div class="info-producto-carrito-2 carrito-cruz">
+                              <input type="number" min="0" value="1" class="cantidad-producto-carrito" tabindex="0"><p>Adet</p><p>290₺</p>
+                            </div>
+                          </div>  
+                        </section>
+                      </div>
+
+                      <div class="subtotal">
+                        <p>Toplam:420₺</p>
+                      </div>
+                      
+                      <button type="button" class="button" id="boton-comprar">SATIN AL</button>
+                    
+                        
+                      <button type="button" class="button" id="boton-vaciar">TEMİZLE</button>
+                      
+
+                    </div>
+                    
+                  <div class="overlay-cuadro-comprar no-mostrar">
+                    <div class="cuadro-comprar" id="cuadro-comprar-original">
+                      <div class="contenedor-titulo-cuadro-comprar">
+                        <h1 class="titulo-cuadro-comprar">Ödeme</h1>
+                      </div>
+                        <div class="resumen-y-contenedor-datos-personales-y-pago">
+                          <div class="contenedor-datos-personales-y-pago">
+                            <div class="contenedor-datos-personales">
+                              <div class="contenedor-titulo-datos-personales">
+                                <h3 class="titulo-datos-personales">Kişisel Bilgiler</h2>
+                              </div>
+                              <div class="contenedor-ingresar-datos-personales linea-divisoria-cuadro-comprar">
+                                  <p class="ingresar-datos-personales-1">
+                                    
+                                  Ad ve Soyad</p>
+                                <form class="input-ingresar-datos-personales-1" id="form-cuadro-comprar" name="formulario-email-nombre">
+                                  <input type="text" placeholder="Adınız ve Soyadınız" name="name-lastname" id="ingresar-nombre-completo" required>
+                                
+                                  <p class="ingresar-datos-personales-2">Email *</p>
+                                
+                                  <input type="email" placeholder="e.s....s@gmail.com" id="ingresar-email" name="email" required>
+                                </form>
+                              </div>
+                            </div>
+
+                            <div class="contenedor-opciones-pago">
+                              <div class="contenedor-titulo-opciones-pago">
+                                <h3 class="titulo-opciones-pago">Ödeme Seçenekleri</h2>
+                              </div>
+                              <form class="contenedor-botones-opciones-pago">
+                                <label>
+                                  <input class="metodos-de-pago" type="radio" name="pago" checked value="debito" id="boton-debito"> Banka kartı
+                                </label>
+                                <label>
+                                  <input class="metodos-de-pago" type="radio" name="pago" value="credito" id="boton-credito"> Kredi Kartı
+                                </label>
+                                <label>
+                                  <input class="metodos-de-pago" type="checkbox" name="envio" value="delivery" id="boton-delivery">Teslimat ekle
+                                </label>
+                                <label>
+                                  <input class="metodos-de-pago" type="checkbox" name="tarjeta-regalo" value="giftcard" id="boton-giftcard"> Hediye kartı ekle
+                                </label>
+                              </form>
+                            </div>
+
+                            
+                          </div>
+
+                          <section class="resumen">
+                            <div>
+                              <h3 class="titulo-opciones-pago">Toplam</h2>
+                            </div>
+                            <br>
+
+                            <div class="contenedor-recargos-subtotales">
+                              <div class="contenedor-subtotal">
+                                <p class="subtotal-opciones-pago">Ara Toplam</p>
+                                <p class="subtotal-precio-opciones-pago">0</p>
+                              </div>
+                              <div class="contenedor-giftcard no-mostrar recargo">
+                                <p class="giftcard-opciones-pago">%5 İndirim</p>
+                                <p class="giftcard-precio-opciones-pago">0</p>
+                              </div>
+                              <div class="contenedor-delivery no-mostrar recargo">
+                                <p class="delivery-opciones-pago">Teslimat</p>
+                                <p class="delivery-precio-opciones-pago">0</p>
+                              </div>
+                              <div class="contenedor-recargo no-mostrar recargo">
+                                <p class="recargo-opciones-pago">Kart Ücreti</p>
+                                <p class="recargo-precio-opciones-pago">0</p>
+                              </div>
+                            </div>
+
+                            <div class="contenedor-total">
+                              <p class="total-opciones-pago">TOPLAM</p>
+                              <p class="total-precio-opciones-pago">0</p>
+                            </div>    
+                          </section>
+                        </div>
+
+                      
+
+                      <footer class="botones-footer-cuadro-comprar">
+                        <button type="button" id="boton-seguir-comprando" class="boton-gris-cuadro-seguir">
+                        ALIŞVERİŞE DEVAM
+                        </button>
+                        <form class="formulario-enviar">
+                          <button type="submit" form="form-cuadro-comprar" value="Submit" class="boton-enviar-formulario">
+                            GÖNDER
+                          </button>
+                        </form>
+                      </footer>
+                      <!-- Fin checkout -->
+
+
+
+
+
+                    </div>
+                  </div>
+                  
+                  <div class="overlay-cuadro-vaciar no-mostrar">
+                    
+                    <div class="cuadro-vaciar">
+                      <div class="contenedor-titulo-cuadro-vaciar">
+                        <h2 class="titulo-cuadro-vaciar">You're about to clear items. Do you want to continue?</h2>
+                      </div>
+                      <div class="contenedor-botones-cuadro-vaciar">
+                        <button type="button" class="boton-gris-cuadro-vaciar" id="boton-cancelar">CANCEL</button>
+                        <button type="button" class="boton-rojo-cuadro-vaciar">CLEAR</button>
+                      </div>
+                    </div>
+                  </div>  
+              <!-- Fin carrito -->
+
+          </section>
+      </header>
+      <!-- Fin header -->
+      <!-- Comienzo Seccion principal -->
+
+      <section class="contenedor-imagen-principal" alt="Images of dogs, bunnies, cat and hamster in pink background">
+        <h1 class="texto-imagen-principal">Aksesuarlar</h1>
+      </section>
+
+      <section class="contenedor-seccion-principal">
+            <div class="seccion-principal">
+              <!-- Comienzo aside -->
+              <aside class="seccion-aside" id="seccion-aside-mostrada">
+                  <form class="formulario-principal" name="form-princ">
+                    
+                      <div class="contenedor-botones-aside-1">
+                          <h3 class="filtros">FİLTRELE</h3>
+                          <button class="filters-clear-btn"><i class="fas fa-trash-alt" aria-label="trash bin" alt="trash bin"></i> TEMİZLE</button>
+                      </div>
+                          
+                      <div class="contenedor-botones-aside-2">
+                          <h3 class="buscar">ARAMA</h3>
+                          <div class="contenedor-busqueda" class="boton-buscar">
+                              <input type="text" placeholder="Ara" id="buscar-productos">
+                              <i class="fas fa-search" aria-label="Magnifier icon"></i>
+                          </div>
+                      </div>
+                      
+                      <div class="contenedor-botones-aside-3 formulario">
+                          <h3>KATEGORİ</h3>
+                              <label for="categorias">
+                                  <input type="checkbox" name="categoria" class="categorias" value="cats"> KEDİ
+                              </label>
+                              <label for="categorias">
+                                  <input type="checkbox" name="categoria" class="categorias" value="dogs"> KÖPEK
+                              </label>
+                              <label for="categorias">
+                                  <input type="checkbox" name="categoria" class="categorias" value="hamsters"> HAMSTER
+                              </label>
+                              <label for="categorias">
+                                  <input type="checkbox" name="categoria" class="categorias" value="bunnies"> TAVŞAN
+                              </label>
+                      </div>
+                      
+                      <div class="contenedor-botones-aside-4 formulario">
+                          <h3>DEĞERLENDİRME</h3>
+                              <label>
+                                  <input type="checkbox" name="puntaje" class="rating-checkbox" value="5" aria-label="Five stars" alt="Five stars">
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i> (5)
+                              </label>
+                              <label>
+                                  <input type="checkbox" name="puntaje" class="rating-checkbox" value="4" aria-label="Four stars" alt="Four stars">
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="far fa-star"></i> (4)
+                              </label>
+                              <label>
+                                  <input type="checkbox" name="puntaje" class="rating-checkbox" value="3" aria-label="Three stars" alt="Three stars">
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="far fa-star"></i>
+                                  <i class="far fa-star"></i> (3)
+                              </label>
+                              <label>
+                                  <input type="checkbox" name="puntaje" class="rating-checkbox" value="2" aria-label="Two stars" alt="Two stars">
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="far fa-star"></i>
+                                  <i class="far fa-star"></i>
+                                  <i class="far fa-star"></i> (2)
+                              </label>
+                              <label>
+                                  <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="1" aria-label="One star" alt="One star">
+                                  <i class="fas fa-star"></i>
+                                  <i class="far fa-star"></i>
+                                  <i class="far fa-star"></i>
+                                  <i class="far fa-star"></i>
+                                  <i class="far fa-star"></i> (1)
+                              </label>
+                      </div>
+                  </form>
+              </aside>
+                    <!-- Fin aside -->
+                <!-- Comienzo productos -->
+              
+              <div class="seccion-productos">
+                <div class="contenedor-barra-principal-productos">
+                    
+                  <p class="cantidad-de-productos">
+                    Stokta Bulunan 12 Ürün <span class="cantidad-mostrada">
+                    
+                  <div class="view-buttons">
+                    Görünüm
+              
+                    <button type="button" class="view-btn show-grid-btn">
+                      <i class="fas fa-th" aria-label="Grid icon" alt="Grid icon"></i>
+                    </button>
+                    <button type="button" class="view-btn show-list-btn">
+                      <i class="fas fa-list" aria-label="List icon" alt="List icon"></i>
+                    </button>
+                  </div>
+
+                  <div class="boton-responsive-filtro">
+                    
+                    <button type="button" class="view-btn boton-filtro">
+                      <i class="fas fa-filter" aria-label="Filter icon" alt="Filter icon"></i><p class="texto-filters-responsive">Filters</p>
+                    </button>
+                    
+                  </div>
+
+                </div>
+
+                  <section class="contenedor-seccion-productos">
+                    <div>
+                      <article class="producto"
+                      data-nombre="comfy bed"
+                      data-categoria="cats"
+                      data-precio="22"
+                      data-puntaje="3"
+                      >
+                        <div class="product-img-container">
+                          <img src="img/Products/1575022860_2_2292.jpg" alt="comfortable bed" class="product-img" />
+                        </div>
+                        <div class="product-body">
+                          <h3 class="product-name">Kedileriniz İçin Rahat Yatak</h3>
+                          <p class="product-price">130₺</p>
+                          <p class="descripcion-producto no-mostrar">Yumuşak ve sıcak </p>
+                          <div class="rating" aria-label="Three stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                          <div class="product-actions">
+                            <button type="button" class="button button-default boton-agregar-carrito" id="addToCartButton">
+                              Sepete Ekle
+                            </button>
+                            
+                            <script>
+                            document.getElementById('addToCartButton').addEventListener('click', function() {
+                                window.location.href = 'https://www.trendyol.com/petitoys/gri-55-cap-yumusak-milano-yatak-p-475813634'; // Burada '/sepetim' yerine istediğiniz sayfanın URL'sini yazın
+                            });
+                            </script>
+                            
+                            </button>
+                          </div>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <div>
+                      <article class="producto"
+                      data-nombre="oak scratcher"
+                      data-categoria="cats"
+                      data-precio="50"
+                      data-puntaje="5"
+                      >
+                        <div class="product-img-container">
+                          <img src="img/Products/large-365520_LW_CUBOX_BASE_CAT_SCRATCH_OAK.jpg" alt="wood scratcher" class="product-img"/>
+                        </div>
+                        <div class="product-body">
+                          <h3 class="product-name">Kedi Tırmalama</h3>
+                          <p class="product-price">290₺</p>
+                          <p class="descripcion-producto no-mostrar">Koltuklarınız ve perdenize Yazık olmasın diye önerimizdir.</p>
+                          <div class="rating" aria-label="Five stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                          <div class="product-actions">
+                            <button type="button" class="button button-default boton-agregar-carrito">
+                              Sepete Ekle
+                            </button>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <div>
+                      <article class="producto"
+                      data-nombre="carrot tree"
+                      data-categoria="bunnies"
+                      data-precio="26.39"
+                      data-puntaje="2"
+                      >
+                        <div class="product-img-container">
+                          <img src="img/Products/s-l640.jpg" class="product-img" alt="toy tree"/>
+                        </div>
+                        <div class="product-body">
+                          <h3 class="product-name">Havuç Ağacı</h3>
+                          <p class="product-price">189,99₺</p>
+                          <p class="descripcion-producto no-mostrar">Tavşanlarınız için en eğlenceli alan</p>
+                          <div class="rating" aria-label="Two stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                          </div>
+                          <div class="product-actions">
+                            <button type="button" class="button button-default boton-agregar-carrito">
+                              Sepete Ekle
+                            </button>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <div>
+                      <article class="producto"
+                      data-nombre="interactive feeder"
+                      data-categoria="dogs"
+                      data-precio="20.99"
+                      data-puntaje="3"
+                      >
+                        <div class="product-img-container">
+                          <img src="img/Products/Interactive-Dog-Toys-Pet-IQ-Treat-Food-Toy-Dog-Training-Toys-Puzzle-Educational-Anti-Choke-Feeder.jpg" class="product-img" alt="Dog Interactive Feeder"/>
+                        </div>
+                        <div class="product-body">
+                          <h3 class="product-name">Yemek Kabı </h3>
+                          <p class="product-price">89.99₺</p>
+                          <p class="descripcion-producto no-mostrar">Şık Tasarımlı ve 2 Yıl garantili Mama Kabı </p>
+                          <div class="rating" aria-label="Three stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                          </div>
+                          <div class="product-actions">
+                            <button type="button" class="button button-default boton-agregar-carrito">
+                              Sepete Ekle
+                            </button>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <div>
+                      <article class="producto"
+                      data-nombre="bed with removable cover"
+                      data-categoria="dogs"
+                      data-precio="49.99"
+                      data-puntaje="5"
+                      >
+                        <div class="product-img-container">
+                          <img src="img/Products/default.jpg" class="product-img" alt="bed and cover"/>
+                        </div>
+                        <div class="product-body">
+                          <h3 class="product-name">Çıkarılabilir Kılıflı Köpek Yatağı</h3>
+                          <p class="product-price">1299.99₺</p>
+                          <p class="descripcion-producto no-mostrar">Sevimli dostlarınız İçin 50</p>
+                          <div class="rating" aria-label="Five stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                        <div class="product-actions">
+                          <button type="button" class="button button-default boton-agregar-carrito">
+                            Sepete Ekle
+                          </button>
+                        </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <div>
+                      <article class="producto"
+                      data-nombre="Oyuncak Köprü"
+                      data-categoria="hamsters"
+                      data-precio="10.30"
+                      data-puntaje="1"
+                      >
+                        <div class="product-img-container">
+                          <img src="img/Products/319vlKvCVcL._AC_SY400_.jpg" class="product-img" alt="hamster bridge"/>
+                        </div>
+                        <div class="product-body">
+                          <h3 class="product-name">Oyuncak Köprü</h3>
+                          <p class="product-price">59,99₺</p>
+                          <p class="descripcion-producto no-mostrar"></p>
+                          <div class="rating" aria-label="One star">
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                          </div>
+                        <div class="product-actions">
+                          <button type="button" class="button button-default boton-agregar-carrito">
+                            Sepete Ekle
+                          </button>
+                        </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <div>
+                      <article class="producto"
+                      data-nombre="grass house"
+                      data-categoria="bunnies"
+                      data-precio="19.99"
+                      data-puntaje="3"
+                      >
+                        <div class="product-img-container">
+                          <img src="img/Products/6164Uje7byL._AC_SX522_.jpg" class="product-img" alt="pet house"/>
+                        </div>
+                        <div class="product-body">
+                          <h3 class="product-name">Çim ev(Tavşan)</h3>
+                          <p class="product-price">249.99₺</p>
+                          <p class="descripcion-producto no-mostrar">LYumuşak tüylü sevimli tavşanlarınızın için eğlence alanı</p>
+                          <div class="rating" aria-label="Three stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                          </div>
+                        <div class="product-actions">
+                          <button type="button" class="button button-default boton-agregar-carrito">
+                            Sepete Ekle
+                          </button>
+                        </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <div>
+                      <article class="producto"
+                      data-nombre="food maze"
+                      data-categoria="cats"
+                      data-precio="32.50"
+                      data-puntaje="2"
+                      >
+                        <div class="product-img-container">
+                          <img src="img/Products/AP4SS200603e3mqp.jpg" class="product-img" alt/>
+                        </div>
+                        <div class="product-body">
+                          <h3 class="product-name">Labirent Tasarımlı Mama Kabı</h3>
+                          <p class="product-price">799.99₺</p>
+                          <p class="descripcion-producto no-mostrar">Kedinizi İzlerken Eğleneceğiniz çok amaçlı mama kabı</p>
+                          <div class="rating" aria-label="Two stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                          </div>
+                        <div class="product-actions">
+                          <button type="button" class="button button-default boton-agregar-carrito">
+                            Sepete Ekle
+                          </button>
+                        </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <div>
+                      <article class="producto"
+                      data-nombre="Profosyonel Fırça Seti"
+                      data-categoria="dogs"
+                      data-precio="30.25"
+                      data-puntaje="4"
+                      >
+                        <div class="product-img-container">
+                          <img src="img/Products/Professional-Dog-Comb-Brush-Tool-Comb-Round-Dog-Grooming-Trimmer-Antistatic-Flea-Pet-Cat-Steel-Chinese.jpg" class="product-img" alt="pet brushes"/>
+                        </div>
+                        <div class="product-body">
+                          <h3 class="product-name">Profosyonel Fırça Seti</h3>
+                          <p class="product-price">299.99₺</p>
+                          <p class="descripcion-producto no-mostrar"></p>
+                          <div class="rating" aria-label="Four stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                          </div>
+                        <div class="product-actions">
+                          <button type="button" class="button button-default boton-agregar-carrito">
+                            Sepete Ekle
+                          </button>
+                        </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <div>
+                      <article class="producto"
+                      data-nombre="Yumuşak Yatak "
+                      data-categoria="Hamsterlar için"
+                      data-precio="199.99"
+                      data-puntaje="3"
+                      >
+                        <div class="product-img-container">
+                          <img src="img/Products/41igobiNOfL._AC_.jpg" class="product-img" alt="hamster bed"/>
+                        </div>
+                        <div class="product-body">
+                          <h3 class="product-name">Yumuşak Yatak</h3>
+                          <p class="product-price">199,99₺,</p>
+                          <p class="descripcion-producto no-mostrar">Trixie Hamster Yatağı 16x13cmÇift taraflı kullanılabilir kemirgen yatağı.</p>
+                          <div class="rating" aria-label="Three stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                          </div>
+                          <div class="product-actions">
+                            <button type="button" class="button button-default boton-agregar-carrito">
+                              Sepete Ekle
+                            </button>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <div>
+                      <article class="producto"
+                      data-nombre="rope toys set"
+                      data-categoria="bunnies"
+                      data-precio="12.30"
+                      data-puntaje="4"
+                      >
+                        <div class="product-img-container">
+                          <img src="img/Products/817QoAR+WbL._AC_SL1500_.jpg" class="product-img" alt="three rope balls"/>
+                        </div>
+                        <div class="product-body">
+                          <h3 class="product-name">İp Seti</h3>
+                          <p class="product-price">79.99₺</p>
+                          <p class="descripcion-producto no-mostrar">5 metre boyutunda uzun ömürlü dayanıklı ip</p>
+                          <div class="rating" aria-label="Four stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                          </div>
+                          <div class="product-actions">
+                            <button type="button" class="button button-default boton-agregar-carrito">
+                              Sepete Ekle
+                            </button>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <div>
+                      <article class="producto"
+                      data-nombre="Otomatik Yemek Kabı"
+                      data-categoria="hamsters"
+                      data-precio="559,99₺"
+                      data-puntaje="5"
+                      >
+                        <div class="product-img-container">
+                          <img src="img/Products/Automatic-Rabbit-Hamster-Feeder-Water-Bottles-Dispenser-Food-Dish-Bowl-for-Guinea-Pigs-Hamster-Mice-Small.jpg" class="product-img" alt="hamster feeder"/>
+                        </div>
+                        <div class="product-body">
+                          <h3 class="product-name">Otomatik Mama Kabı</h3>
+                          <p class="product-price">559,99₺</p>
+                          <p class="descripcion-producto no-mostrar">Sevimli Hamsterlarınız için yemeyi kolaylaştıran harika bir ürün.</p>
+                          <div class="rating" aria-label="Five stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                          <div class="product-actions">
+                            <button type="button" class="button button-default boton-agregar-carrito">
+                              Sepete Ekle
+                            </button>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+
+                </section>
+              </div>
+              <!-- Fin productos -->
+            </div>
+      </section>
+      <!-- Fin seccion principal -->
+
+      <!-- Comienzo footer -->
+      <footer class="footer-tienda">
+        <div class="contenedor-footer">
+          <p class="última-frase-footer"><i class="fa fa-paw" aria-hidden="true" aria-label="Pink paw" alt="Pink paw"></i> Nuh'un Gemisi - Bizi tercih ettiğiniz için teşekkürler.</p>
+          <div class="contenedor-redes-footer">
+            <ul class="links-redes">
+              <li class="ícono-redes">
+                <a href="https://github.com/" target="_blank" class="footer-social-link github-link">
+                  <i class="fab fa-github" aria-label="Github icon" alt="Github icon"></i></a>
+              </li>
+              <li class="ícono-redes">
+                <a href="https://www.linkedin.com/" target="_blank" class="footer-social-link linkedin-link">
+                  <i class="fab fa-linkedin" aria-label="LinkedIn icon" alt="LinkedIn icon"></i></a>
+              </li>
+              <li class="ícono-redes">
+                <a href="mailto:20202022052@std.nisantasi.edu.tr" target="_blank" class="footer-social-link email-link">
+                  <i class="fas fa-envelope fab" aria-label="envelope" alt="Envelope"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>  
+      </footer>
+     
+
+      <div class="overlay-seccion-aside-responsive no-mostrar"></div>
+        <div class="seccion-aside-responsive">
+          <form class="formulario-principal" name="form-princ">
+            <div class="contenedor-boton-cerrar-aside-responsive">
+            <button type="button" id="boton-cerrar-aside-responsive" class="fas fa-times" aria-label="cross" alt="cross"></button>
+            </div>
+              <div class="contenedor-botones-aside-responsive-1">
+                  
+                  <h3 class="filtros">Filtrele</h3>
+                  <button class="Filtrele-clear-btn"><i class="fas fa-trash-alt" aria-label="trash bin" alt="trash bin"></i> CLEAR</button>
+              </div>
+                  
+              <div class="contenedor-botones-aside-responsive-2">
+                  <h3 class="buscar">ARA</h3>
+                          <div class="contenedor-busqueda" class="boton-buscar">
+                              <input type="text" placeholder="Search products" id="buscar-productos-responsive">
+                              <i class="fas fa-search" aria-label="Magnifier icon" alt="Magnifier icon"></i>
+                          </div>
+              </div>
+              
+              <div class="contenedor-botones-aside-responsive-3 formulario">
+                  <h3>KATEGORİLER</h3>
+                      <label for="kategoriler">
+                          <input type="checkbox" name="kategori" class="kategoriler checkbox1" value="kediler"> KEDİLER
+                      </label>
+                      <label>
+                        <input type="checkbox" name="puntaje" class="rating-checkbox" value="5" aria-label="Five stars">
+                    </label>
+                      <label for="kategoriler">
+                          <input type="checkbox" name="kategori" class="kategoriler checkbox1" value="köpekler"> KÖPEKLER
+                      </label>
+                      <label for="kategoriler">
+                          <input type="checkbox" name="kategori" class="kategoriler checkbox1" value="hamsterlar"> HAMSTERLAR
+                      </label>
+                      <label for="kategoriler">
+                          <input type="checkbox" name="kategori" class="kategoriler checkbox1" value="tavşanlar"> TAVŞANLAR
+                      </label>
+              </div>
+              
+              <div class="contenedor-botones-aside-responsive-4 formulario">
+                  <h3>RATING</h3>
+                      <label>
+                          <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="5" aria-label="Five stars" alt="Five stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i> (5)
+                      </label>
+                      <label>
+                          <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="4" aria-label="Four stars" alt="Four stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="far fa-star"></i> (4)
+                      </label>
+                      <label>
+                          <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="3" aria-label="Three stars" alt="Three stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i> (3)
+                      </label>
+                      <label>
+                          <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="2" aria-label="Two stars" alt="Two stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i> (2)
+                      </label>
+                      <label>
+                          <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="1" aria-label="One star" alt="One star">
+                          <i class="fas fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i> (1)
+                      </label>
+              </div>
+          </form>
+        </div>
+      
+
+    <script src="index.js"></script>
+    <script src="hayvanyagisi.js"></script>    
+  </body>
+</html>
